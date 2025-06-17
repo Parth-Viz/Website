@@ -16,7 +16,7 @@ function App() {
         className="fixed inset-0 w-full h-full object-cover -z-10 border-4 border-red-500"
         style={{ objectFit: 'cover', backgroundColor: '#222' }}
       >
-        <source src="/Website/background.mp4" type="video/mp4" />
+        <source src="https://parth-viz.github.io/Website/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       {/* Sticky, minimal nav */}
