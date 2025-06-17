@@ -6,16 +6,17 @@ function App() {
 
   return (
     <div className="bg-black text-white font-sans min-h-screen w-full" style={{ minHeight: '100vh', width: '100vw', overflow: 'hidden' }}>
-      {/* Local video background (renamed to background.mp4) */}
+      {/* Local video background with correct base path for GitHub Pages */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="fixed inset-0 w-full h-full object-cover -z-10"
-        style={{ objectFit: 'cover' }}
+        poster="https://via.placeholder.com/1920x1080/222/fff?text=Video+Poster"
+        className="fixed inset-0 w-full h-full object-cover -z-10 border-4 border-red-500"
+        style={{ objectFit: 'cover', backgroundColor: '#222' }}
       >
-        <source src="/background.mp4" type="video/mp4" />
+        <source src="/Website/background.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       {/* Sticky, minimal nav */}
