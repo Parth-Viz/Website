@@ -1,0 +1,80 @@
+{
+  "hyderabad": {
+    "title": "Hyderabad, India",
+    "description": "The City of Pearls - a perfect blend of old and new India",
+    "coverImage": "/images/travel/hyderabad.jpg",
+    "photos": [
+      "/images/travel/hyderabad/photo1.jpg",
+      "/images/travel/hyderabad/photo2.jpg",
+      "/images/travel/hyderabad/photo3.jpg",
+      "/images/travel/hyderabad/photo4.jpg",
+      "/images/travel/hyderabad/photo5.jpg",
+      "/images/travel/hyderabad/photo6.jpg"
+    ]
+  },
+  "rajasthan": {
+    "title": "Rajasthan, India",
+    "description": "The Land of Kings - where history comes alive in every corner",
+    "coverImage": "/images/travel/rajasthan.jpg",
+    "photos": [
+      "/images/travel/rajasthan/photo1.jpg",
+      "/images/travel/rajasthan/photo2.jpg",
+      "/images/travel/rajasthan/photo3.jpg",
+      "/images/travel/rajasthan/photo4.jpg",
+      "/images/travel/rajasthan/photo5.jpg",
+      "/images/travel/rajasthan/photo6.jpg"
+    ]
+  },
+  "delhi": {
+    "title": "Delhi, India",
+    "description": "The Heart of India - where ancient monuments meet modern life",
+    "coverImage": "/images/travel/delhi.jpg",
+    "photos": [
+      "/images/travel/delhi/photo1.jpg",
+      "/images/travel/delhi/photo2.jpg",
+      "/images/travel/delhi/photo3.jpg",
+      "/images/travel/delhi/photo4.jpg",
+      "/images/travel/delhi/photo5.jpg",
+      "/images/travel/delhi/photo6.jpg"
+    ]
+  },
+  "abu-dhabi": {
+    "title": "Abu Dhabi, UAE",
+    "description": "The Capital of the Emirates - where tradition meets innovation",
+    "coverImage": "/images/travel/abu-dhabi.jpg",
+    "photos": [
+      "/images/travel/abu-dhabi/photo1.jpg",
+      "/images/travel/abu-dhabi/photo2.jpg",
+      "/images/travel/abu-dhabi/photo3.jpg",
+      "/images/travel/abu-dhabi/photo4.jpg",
+      "/images/travel/abu-dhabi/photo5.jpg",
+      "/images/travel/abu-dhabi/photo6.jpg"
+    ]
+  },
+  "byron-bay": {
+    "title": "Byron Bay, Australia",
+    "description": "The Easternmost Point - where the Pacific meets laid-back Aussie culture",
+    "coverImage": "/images/travel/byron-bay.jpg",
+    "photos": [
+      "/images/travel/byron-bay/photo1.jpg",
+      "/images/travel/byron-bay/photo2.jpg",
+      "/images/travel/byron-bay/photo3.jpg",
+      "/images/travel/byron-bay/photo4.jpg",
+      "/images/travel/byron-bay/photo5.jpg",
+      "/images/travel/byron-bay/photo6.jpg"
+    ]
+  },
+  "sydney": {
+    "title": "Sydney, Australia",
+    "description": "The Harbour City - Australia's most iconic metropolis",
+    "coverImage": "/images/travel/sydney.jpg",
+    "photos": [
+      "/images/travel/sydney/photo1.jpg",
+      "/images/travel/sydney/photo2.jpg",
+      "/images/travel/sydney/photo3.jpg",
+      "/images/travel/sydney/photo4.jpg",
+      "/images/travel/sydney/photo5.jpg",
+      "/images/travel/sydney/photo6.jpg"
+    ]
+  }
+} 
