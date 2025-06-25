@@ -213,43 +213,6 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {[
-              { title: "Hyderabad, India", image: "/images/travel/hyderabad.jpg", slug: "hyderabad" },
-              { title: "Rajasthan, India", image: "/images/travel/rajasthan.jpg", slug: "rajasthan" },
-              { title: "Delhi, India", image: "/images/travel/delhi.jpg", slug: "delhi" },
-              { title: "Abu Dhabi, UAE", image: "/images/travel/abu-dhabi.jpg", slug: "abu-dhabi" },
-              { title: "Byron Bay, Australia", image: "/images/travel/byron-bay.jpg", slug: "byron-bay" },
-              { title: "Sydney, Australia", image: "/images/travel/sydney.jpg", slug: "sydney" }
-            ].map((album, i) => (
-              <Link key={i} to={`/gallery/location/${album.slug}`} className="block">
-                <div className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
-                  <TiltedCard
-                    imageSrc={album.image}
-                    altText={album.title}
-                    captionText={album.title}
-                    containerHeight="256px"
-                    containerWidth="100%"
-                    imageHeight="256px"
-                    imageWidth="100%"
-                    rotateAmplitude={10}
-                    scaleOnHover={1.08}
-                    showMobileWarning={false}
-                    showTooltip={true}
-                    displayOverlayContent={true}
-                    overlayContent={
-                      <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-30 transition-all duration-300 flex items-end">
-                        <div className="p-6 text-white">
-                          <h3 className="text-xl font-semibold group-hover:text-orange-300 transition-colors">{album.title}</h3>
-                        </div>
-                      </div>
-                    }
-                  />
-                </div>
-              </Link>
-            ))}
-          </div>
-          
           <div className="text-center">
             <Link to="/gallery">
               <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg">

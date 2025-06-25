@@ -1,10 +1,9 @@
-
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
-import Navigation from "@/components/Navigation";
-import MovingBackground from "@/components/MovingBackground";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import Particles from "@/components/Particles";
+import { ArrowLeft, ExternalLink, Github, Home } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ProjectDetail = () => {
   const { projectId } = useParams();
@@ -25,58 +24,83 @@ const ProjectDetail = () => {
 
   if (isLoading) {
     return (
-      <MovingBackground>
-        <Navigation />
-        <div className="pt-16 min-h-screen flex items-center justify-center">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading project...</p>
+      <div className="min-h-screen bg-black">
+        <div className="pt-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center py-20">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
+              <p className="text-gray-300">Loading project...</p>
+            </div>
           </div>
         </div>
-      </MovingBackground>
+      </div>
     );
   }
 
   if (!project) {
     return (
-      <MovingBackground>
-        <Navigation />
-        <div className="pt-16 min-h-screen flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Project Not Found</h1>
-            <Link to="/projects" className="text-orange-500 hover:text-orange-600 flex items-center justify-center gap-2">
-              <ArrowLeft size={20} />
-              Back to Projects
-            </Link>
+      <div className="min-h-screen bg-black">
+        <div className="pt-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center py-20">
+              <h1 className="text-4xl font-bold text-white mb-4">Project Not Found</h1>
+              <Link to="/projects" className="text-orange-500 hover:text-orange-600 flex items-center justify-center gap-2">
+                <ArrowLeft size={20} />
+                Back to Projects
+              </Link>
+            </div>
           </div>
         </div>
-      </MovingBackground>
+      </div>
     );
   }
 
   return (
-    <MovingBackground>
-      <Navigation />
-      <div className="pt-16 min-h-screen">
+    <div className="min-h-screen bg-black">
+      {/* Particles Background - Full Page */}
+      <div style={{ width: '100%', height: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 0 }}>
+        <Particles
+          particleColors={['#ffffff', '#ffffff']}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
+      
+      {/* Back to Home Button */}
+      <div className="fixed top-4 left-4 z-50">
+        <Link to="/">
+          <Button variant="outline" className="bg-black/50 border-gray-600 text-white hover:bg-gray-800 hover:border-gray-500">
+            <Home size={16} className="mr-2" />
+            Back to Home
+          </Button>
+        </Link>
+      </div>
+      
+      <div className="relative z-10 pt-20 min-h-screen">
         <div className="max-w-4xl mx-auto px-4 py-16">
           <Link to="/projects" className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-600 mb-8 transition-colors">
             <ArrowLeft size={20} />
             Back to Projects
           </Link>
 
-          <div className="bg-white/80 backdrop-blur-sm rounded-lg shadow-lg p-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">{project.title}</h1>
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg p-8 border border-gray-700">
+            <h1 className="text-4xl font-bold text-white mb-4">{project.title}</h1>
             
-            <p className="text-lg text-gray-700 mb-6">{project.description}</p>
+            <p className="text-lg text-gray-300 mb-6">{project.description}</p>
 
             {project.tech_stack && project.tech_stack.length > 0 && (
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Tech Stack</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">Tech Stack</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.tech_stack.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium"
+                      className="px-3 py-1 bg-orange-500/20 text-orange-300 border border-orange-500/30 rounded-full text-sm font-medium"
                     >
                       {tech}
                     </span>
@@ -87,7 +111,7 @@ const ProjectDetail = () => {
 
             {project.screenshot_urls && project.screenshot_urls.length > 0 && (
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Screenshots</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Screenshots</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {project.screenshot_urls.map((url, index) => (
                     <img
@@ -102,8 +126,8 @@ const ProjectDetail = () => {
             )}
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">About This Project</h3>
-              <div className="prose prose-lg text-gray-700">
+              <h3 className="text-xl font-semibold text-white mb-4">About This Project</h3>
+              <div className="prose prose-lg text-gray-300">
                 {project.content.split('\n').map((paragraph, index) => (
                   <p key={index} className="mb-4">{paragraph}</p>
                 ))}
@@ -116,7 +140,7 @@ const ProjectDetail = () => {
                   href={project.github_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors border border-gray-600"
                 >
                   <Github size={20} />
                   View Code
@@ -137,7 +161,7 @@ const ProjectDetail = () => {
           </div>
         </div>
       </div>
-    </MovingBackground>
+    </div>
   );
 };
 
