@@ -18,8 +18,8 @@ export type Database = {
           featured: boolean | null
           github_url: string | null
           id: string
+          image_urls: string[] | null
           published: boolean | null
-          screenshot_urls: string[] | null
           tech_stack: string[] | null
           title: string
           updated_at: string
@@ -33,8 +33,8 @@ export type Database = {
           featured?: boolean | null
           github_url?: string | null
           id?: string
+          image_urls?: string[] | null
           published?: boolean | null
-          screenshot_urls?: string[] | null
           tech_stack?: string[] | null
           title: string
           updated_at?: string
@@ -48,8 +48,8 @@ export type Database = {
           featured?: boolean | null
           github_url?: string | null
           id?: string
+          image_urls?: string[] | null
           published?: boolean | null
-          screenshot_urls?: string[] | null
           tech_stack?: string[] | null
           title?: string
           updated_at?: string

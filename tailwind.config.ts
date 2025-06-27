@@ -87,7 +87,13 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+			},
+			fontFamily: {
+				inter: ["Inter", "sans-serif"],
+				poppins: ["Poppins", "sans-serif"],
+				montserrat: ["Montserrat", "sans-serif"],
+				roboto: ["Roboto", "sans-serif"],
+			},
 		}
 	},
 	plugins: [

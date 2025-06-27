@@ -32,7 +32,7 @@ CREATE TABLE public.project_blogs (
   tech_stack TEXT[] DEFAULT '{}',
   github_url TEXT,
   demo_url TEXT,
-  screenshot_urls TEXT[] DEFAULT '{}',
+  image_urls TEXT[] DEFAULT '{}',
   video_urls TEXT[] DEFAULT '{}',
   published BOOLEAN DEFAULT false,
   featured BOOLEAN DEFAULT false,
@@ -70,7 +70,7 @@ INSERT INTO public.travel_photos (album_id, image_url, caption, location, taken_
 ((SELECT id FROM public.travel_albums WHERE title = 'Mountain Hiking'), 'https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800', 'Mountain river valley', 'Alps', '2023-11-10', 1);
 
 -- Insert some placeholder project blogs
-INSERT INTO public.project_blogs (title, description, content, tech_stack, github_url, demo_url, screenshot_urls, published, featured) VALUES
+INSERT INTO public.project_blogs (title, description, content, tech_stack, github_url, demo_url, image_urls, published, featured) VALUES
 ('E-Commerce Platform', 'A full-stack e-commerce solution with modern UI and robust backend', 'This project showcases a complete e-commerce platform built with modern technologies. Features include user authentication, product management, shopping cart, and payment integration.', 
 ARRAY['React', 'Node.js', 'PostgreSQL', 'Stripe'], 'https://github.com/yourusername/ecommerce-platform', 'https://demo-ecommerce.com', 
 ARRAY['https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800'], true, true),
